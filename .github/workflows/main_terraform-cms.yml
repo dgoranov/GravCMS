@@ -56,5 +56,5 @@
           with:
             app-name: 'terraform-cms'
             slot-name: 'production'
-            publish-profile: ${{ secrets.AzureAppService_PublishProfile_6826e15c23874f78aa8e8dc46a84aa5e }}
+            publish-profile: ${{ secrets.AzureAppService_PublishProfile_85adfea7753b40ec93a21c90ed11f2d1 }}
             package: .
