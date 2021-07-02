@@ -26,8 +26,7 @@
         "psr/simple-cache": "^1.0",
         "psr/http-message": "^1.0",
         "psr/http-server-middleware": "^1.0",
-        "psr/container": "~1.0.0",
-        "nyholm/psr7-server": "^1.0",
+        "kodus/psr7-server": "*",
         "nyholm/psr7": "^1.3",
         "twig/twig": "~1.44",
         "erusev/parsedown": "^1.7",
@@ -44,10 +43,10 @@
         "filp/whoops": "~2.9",
         "matthiasmullie/minify": "^1.3",
         "monolog/monolog": "~1.25",
-        "getgrav/image": "^3.0",
-        "getgrav/cache": "^2.0",
+        "gregwar/image": "dev-php8",
+        "gregwar/cache": "dev-php8",
         "donatj/phpuseragentparser": "~1.1",
-        "pimple/pimple": "~3.3.0",
+        "pimple/pimple": "~3.3",
         "rockettheme/toolbox": "~1.5",
         "maximebf/debugbar": "~1.16",
         "league/climate": "^3.6",
@@ -59,20 +58,19 @@
         "willdurand/negotiation": "^3.0",
         "itsgoingd/clockwork": "^5.0",
         "enshrined/svg-sanitize": "~0.13",
-        "symfony/http-client": "^4.4",
-        "composer/semver": "^1.4"
+        "symfony/http-client": "^4.4"
     },
     "require-dev": {
         "codeception/codeception": "^4.1",
         "phpstan/phpstan": "^0.12",
         "phpstan/phpstan-deprecation-rules": "^0.12",
         "phpunit/php-code-coverage": "~9.2",
-        "getgrav/markdowndocs": "^2.0",
+        "fzaninotto/faker": "^1.9",
+        "victorjonsson/markdowndocs": "dev-master",
         "codeception/module-asserts": "^1.3",
-        "codeception/module-phpbrowser": "^1.0",
-        "symfony/service-contracts": "*"
+        "codeception/module-phpbrowser": "^1.0"
     },
-    "replace": {
+    "provide": {
         "symfony/polyfill-php72": "*",
         "symfony/polyfill-php73": "*"
     },
@@ -91,6 +89,20 @@
             "php": "7.3.6"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/trilbymedia/PHP-Markdown-Documentation-Generator"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/getgrav/Cache"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/getgrav/Image"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Grav\\": "system/src/Grav"
