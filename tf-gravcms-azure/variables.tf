@@ -7,7 +7,8 @@ variable "name" {
 variable "environment" {
   type        = string
   description = "Name of the deployment environment"
-  default     = "Development"
+  # default     = "Dev"
+  default     = "Prod"
 }
 
 variable "location" {
@@ -25,7 +26,7 @@ variable "dns_prefix" {
 variable "plan_tier" {
   type        = string
   description = "The tier of app service plan to create"
-  default     = "Test"
+  default     = "Free"
 }
 
 variable "plan_sku" {
