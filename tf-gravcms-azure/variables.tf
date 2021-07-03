@@ -1,14 +1,24 @@
 variable "name" {
   type        = string
   description = "Location of the azure resource group."
-  default     = "TerraformGravCms"
+  default     = "gravcms-test-02"
 }
 
-variable "environment" {
+variable "instance_count" {
+  default = 2
+  description = "Number of instances "
+}
+
+variable "environment_prod" {
   type        = string
   description = "Name of the deployment environment"
-  # default     = "Dev"
-  default     = "Prod"
+  default     = "production"
+}
+
+variable "environment_devel" {
+  type        = string
+  description = "Name of the deployment environment"
+  default     = "development"
 }
 
 variable "location" {
@@ -26,11 +36,11 @@ variable "dns_prefix" {
 variable "plan_tier" {
   type        = string
   description = "The tier of app service plan to create"
-  default     = "Free"
+  default     = "Basic"
 }
 
 variable "plan_sku" {
   type        = string
   description = "The sku of app service plan to create"
-  default     = "F1"
+  default     = "B1"
 }
