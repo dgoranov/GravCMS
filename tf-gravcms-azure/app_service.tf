@@ -21,16 +21,14 @@ resource "azurerm_app_service" "default" {
 
   site_config {
     php_version = "7.4"
-    scm_type = "LocalGit"
+    # scm_type = "VSO"
   }
 
-
-  # source_control {
-  #   branch = "main"
-  #   manual_integration = false
-  #   repo_url = "https://drundo-client-services@dev.azure.com/drundo-client-services/kreios-gravcms-terraform/_git/kreios-gravcms-terraform"
-  #   rollback_enabled = false
-  #   use_mercurial = false
-  # }
-
+  source_control {
+    branch = (count.index == 0) ? var.source_control_branch_devel : var.source_control_branch_prod
+    manual_integration = false
+    repo_url = var.source_control_url
+    rollback_enabled = false
+    use_mercurial = false
+  }
 }
